@@ -1,0 +1,114 @@
+
+
+
+.pizza-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+.pizza-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+ 
+  
+}
+
+
+.pizza-title {
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom:5px;
+}
+
+.pizza-desc {
+  font-size: 14.4px;
+  margin-bottom:6px;
+}
+
+
+
+.order-btn {
+  border-radius: 999px;
+  font-size:14px;
+  padding: 6px 18px;
+  font-weight: bold;
+}
+.order-btn:hover{
+  border:1px solid black;
+  background-color: #ffff;
+  color: black;
+  font-size:14px;
+  font-weight: bold;
+}
+
+.icon-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#d7d7d7;
+} 
+
+.icon-btn:hover{
+  background-color: #dddddd;
+}
+
+.icon-btn svg {
+  font-size: 22px;
+}
+
+/* Animation */
+.pizza-card {
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 0.7s ease;
+}
+
+.pizza-card.slide-left {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideFromLeft 0.7s ease forwards;
+}
+
+.pizza-card.slide-right {
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideFromRight 0.7s ease forwards;
+}
+
+@keyframes slideFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
