@@ -1,8 +1,8 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { FaRegEye, FaFilter, FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
+import Banner from "./Banner";
 import "../App.css";
 
 // 🍕 Filter Header Component
@@ -50,7 +50,7 @@ const PizzaFilterHeader = ({ filterOptions }) => {
   );
 };
 
-// 🍕 Main Pizza Menu Component
+
 const PizzaMenu = () => {
   const [visibleCards, setVisibleCards] = useState({});
   const cardRefs = useRef([]);
@@ -153,7 +153,9 @@ const PizzaMenu = () => {
 
   return (
     <Container>
-      {/*  Header Section */}
+      
+      <Banner />
+ 
       <div className="pizza-hero-section">
         <div className="pizza-hero-overlay">
           <h1 className="hero-title">
@@ -165,12 +167,12 @@ const PizzaMenu = () => {
         </div>
       </div>
 
-      {/*  Filter */}
-      <div className="mt-5">
+     
+      <div className="mt-5 filter-button">
         <PizzaFilterHeader filterOptions={filterOptions} />
       </div>
 
-      {/*  Pizza Cards */}
+  
       <Row>
         {pizzas.map((pizza, index) => (
           <Col
@@ -189,8 +191,8 @@ const PizzaMenu = () => {
             <div className="d-flex align-items-start gap-6 border-bottom pb-3">
               <img src={pizza.img} alt={pizza.name} className="pizza-image" />
               <div>
-                <h6 className="pizza-title">{pizza.name.toUpperCase()}</h6>
-                <p className="text-muted pizza-desc fw-light ms-4">{pizza.description}</p>
+                <h6 className="pizza-title fw-light fs-5">{pizza.name.toUpperCase()}</h6>
+                <p className="text-muted pizza-desc fw-lighter ms-4">{pizza.description}</p>
                 <div className="d-flex align-items-center mb-2 Oldprice">
                   <span className="fw-bold text-warning me-2 ms-4">{pizza.price}</span>
                   <span
