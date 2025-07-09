@@ -19,14 +19,14 @@ const Footer = () => {
       <Container style={{ maxWidth: '1200px' }}>
         <div className="footer-container">
           
-          {/* Left Column */}
+
 
           <div className="footer-col">
             <div className="footer-logo">
               <img src={footer} alt="footer logo" />
             </div>
             <div className="footer-p mt-3 ms-4">
-              <p>20 Carrochan Rd, Balloch, Alexandria G83 8EG, UK<br />
+              <p>20 Carrochan Rd, Balloch, Alexandria G83 8EG, UK
                 69QJ+2F Alexandria, United Kingdom</p>
             </div>
             <div className="calls ms-4">
@@ -35,7 +35,6 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Center Column */}
 
           <div className="footer-col">
             <h2>OPENING HOURS</h2>
@@ -47,10 +46,9 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Right Column */}
-          <div className="footer-col">
+          <div className="footer-col ms-4">
             <h2>USEFUL LINKS</h2>
-            <ul>
+            <ul className='ms-4'>
               <li>Privacy Policy</li>
               <li>Order Tracking</li>
               <li>Warranty and Services</li>
@@ -71,9 +69,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* ✅ Scroll to Top Button */}
+     
         <div className="scroll-top-btn" onClick={scrollToTop} style={{ cursor: 'pointer' }}>
-          <div>
+          <div className='mb-2'>
             <RiArrowUpSLine size={24} />
           </div>
         </div>

@@ -5,7 +5,6 @@ import { CiHeart } from "react-icons/ci";
 import Banner from "./Banner";
 import "../App.css";
 
-// 🍕 Filter Header Component
 const PizzaFilterHeader = ({ filterOptions }) => {
   const [openDropdown, setOpenDropdown] = useState(null);
 
@@ -156,7 +155,6 @@ const PizzaMenu = () => {
     <Container>
       
       <Banner />
-  {/* 🍕 Hero/Header Section */}
       <div className="pizza-hero-section">
         <div className="pizza-hero-overlay">
           <h1 className="hero-title">
@@ -173,11 +171,15 @@ const PizzaMenu = () => {
         <PizzaFilterHeader filterOptions={filterOptions} />
       </div>
 
-  {/* 🍕Pizza card */}
+
       <Row>
         {pizzas.map((pizza, index) => (
           <Col
-            md={6}
+            xxl={6}
+            xl={6}
+            lg={12}
+            md={12}
+            sm={12}
             key={`${pizza.id}-${index}`}
             data-index={index}
             ref={(el) => (cardRefs.current[index] = el)}
