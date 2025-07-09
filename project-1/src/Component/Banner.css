@@ -1,0 +1,24 @@
+/* banner-section */
+
+.order-online-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.background-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+  z-index: 0;
+}
+
+.banner-section {
+  height: 300px;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.65)),
+    url('./images/blog-9.jpg') center center/cover no-repeat;
+}

@@ -14,6 +14,7 @@ const PizzaFilterHeader = ({ filterOptions }) => {
   };
 
   return (
+    
     <div className="filter-bar-container">
       <div className="filter-icon me-5">
         <FaFilter style={{ marginRight: 7 }} />
@@ -155,11 +156,11 @@ const PizzaMenu = () => {
     <Container>
       
       <Banner />
- 
+  {/* 🍕 Hero/Header Section */}
       <div className="pizza-hero-section">
         <div className="pizza-hero-overlay">
           <h1 className="hero-title">
-            PIZZA <span className="highlight fw-bold">CRUST</span> & <span className="highlight-orange">TORTILLAS</span>
+            PIZZA <span className="highlight laterspacing">CRUST</span> & <span className="highlight-orange">TORTILLAS</span>
           </h1>
           <p className="hero-subtitle text-upercase text-bold">
             HIS CREATION SET OFF A HEATED DEBATE OVER WHETHER PINEAPPLE BELONGS ON PIZZA
@@ -172,7 +173,7 @@ const PizzaMenu = () => {
         <PizzaFilterHeader filterOptions={filterOptions} />
       </div>
 
-  
+  {/* 🍕Pizza card */}
       <Row>
         {pizzas.map((pizza, index) => (
           <Col
@@ -191,8 +192,8 @@ const PizzaMenu = () => {
             <div className="d-flex align-items-start gap-6 border-bottom pb-3">
               <img src={pizza.img} alt={pizza.name} className="pizza-image" />
               <div>
-                <h6 className="pizza-title fw-light fs-5">{pizza.name.toUpperCase()}</h6>
-                <p className="text-muted pizza-desc fw-lighter ms-4">{pizza.description}</p>
+                <h6 className="pizza-title fw-light fs-6">{pizza.name.toUpperCase()}</h6>
+                <p className="text-muted pizza-desc text-secondary ms-4">{pizza.description}</p>
                 <div className="d-flex align-items-center mb-2 Oldprice">
                   <span className="fw-bold text-warning me-2 ms-4">{pizza.price}</span>
                   <span
